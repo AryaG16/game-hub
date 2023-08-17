@@ -4,11 +4,11 @@ import { Heading, Spinner, Text } from "@chakra-ui/react";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
-  const { data: game, isLoading, error } = useGame(slug!);
+  const { data: game, isLoading } = useGame(slug!);
 
   if (isLoading) return <Spinner />;
 
-  //   if (error || !game) return error;
+  // if (error || !game) return error;
   return (
     <>
       <Heading>{game?.name}</Heading>
